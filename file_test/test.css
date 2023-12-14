@@ -1,0 +1,101 @@
+/* -------------------------------------------------------Filter --------------------------------------------------------------*/
+.box-filter{
+    width: 100%;
+    background-color: none;
+    display: flex;
+    justify-content: flex-start;
+    justify-items: center;
+  }
+  .filter-item{
+  
+    background-color: none;
+    margin: 10px 20px;
+    position: relative;
+    border: 1px solid gray;
+    padding: 0 5px;
+    display: flex;
+  }
+  .filter-item-brand{
+    box-sizing: content-box;
+    cursor: pointer;
+  
+  }
+  .filter-item-brand-tittle{
+    display: flex;
+  }
+  
+  .filter-item-brand-show{
+    top: 150%;
+    width: 500px;
+    height: 100px;
+    background-color: gray;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .filter-menu {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-checkbox {
+    margin: 5px;
+  }
+  /*------Sort Product */
+  .sortproduct{
+    display: flex;
+    margin: 10px 10px;
+  }
+  .sortproduct button{
+    margin-left: 10px;
+  }
+  
+  /* ----------------------------------------------------------List products------------------------------------------------------ */
+  
+  .listProduct{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+  }
+  .product-list {
+    background-color: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    border: black solid 2px;
+    margin: 20px 10%;
+  }
+  .product-item {
+    min-width: 200px;
+    width: 20%;
+    height: auto;
+    min-height: 280px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid gray;
+    position: relative;
+    padding: 0;
+    margin: 10px;
+    flex: 1;
+    overflow: hidden;
+    display: block;
+  }
+  .product-item img {
+    max-width: 100%;
+    height: auto;
+  } 
+  .product-item.empty{
+    opacity: 0;
+  }
+  .product-item img:hover{
+    transform: scale(110%);
+  }
+  .pagination {
+    margin-top: 10px;
+    text-align: center;
+  }   
+  

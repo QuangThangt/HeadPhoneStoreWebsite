@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Upload and Display Example</title>
+</head>
+<body>
+
+  <input type="file" id="imageInput" accept="image/*">
+  <button onclick="displayImageFromLocal()">Display Image from Local Storage</button>
+  <button onclick="saveImageToLocal()">Save Image to Local Storage</button>
+  <div id="imageContainer"></div>
+
+  <script>
+    function saveImageToLocal() {
+      const input = document.getElementById('imageInput');
+      const file = input.files[0];
+
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const imageDataUrl = e.target.result;
+          localStorage.setItem('savedImage', imageDataUrl);
+          displayImageFromLocal()
+        //   alert('Image saved to local storage!');
+        };
+        reader.readAsDataURL(file);
+      } else {
+        alert('No file selected.');
+      }
+    }
+
+    function displayImageFromLocal() {
+      const savedImage = localStorage.getItem('savedImage');
+
+      if (savedImage) {
+        const image = new Image();
+        image.src = savedImage;
+
+        const imageContainer = document.getElementById('imageContainer');
+        imageContainer.innerHTML = ''; // Clear previous images
+        imageContainer.appendChild(image);
+      } else {
+        alert('No saved image found.');
+      }
+    }
+  </script>
+
+</body>
+</html>

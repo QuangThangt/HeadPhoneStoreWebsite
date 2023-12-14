@@ -1,0 +1,68 @@
+section {
+    padding: 80px 25px 70px ;
+    position: absolute
+
+}
+
+.testbox{
+ position: relative;
+ left: 50px;   
+}
+.footer {
+    display: grid ;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    position: absolute; 
+    left: 0; 
+    right: 0;
+    bottom: 0;
+}
+
+.footer-logo {
+    width: 400px;
+}
+
+
+.footer-box {
+    width: 300px;
+    padding-left: 2rem;
+    
+}
+
+.footer-box-1 {
+    padding-left: 4rem;
+}
+
+.footer-box a,li {
+    text-decoration: none;
+    color: #4F4F4F;
+    list-style-type: none ;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+    display: block;   
+}
+
+
+.footer-box a:hover {
+    transform: translateX(2px) translateY(-1px);
+    color: #828282 ;
+
+}
+
+.footer-box h4 {
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #4F4F4F;
+    margin-bottom: 1.3rem;
+    width: 300px;
+
+}
+
+.copyright-footer {
+    text-align: center;
+    clear: both;
+    width: 100%;
+    font-size: 14px;
+    position: relative; top: 20px; left: 15px ;
+    
+}
